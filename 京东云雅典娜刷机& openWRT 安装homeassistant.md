@@ -140,14 +140,14 @@ apk add luci-i18n-dockerman-zh-cn
 4. 配置 OpenWRT 防火墙通信规则：
    网络 -> 防火墙 -> 通信规则 -> 新增。
 
-   ![mDNS](/resources/firewall-mdns.png)
+   <img src="/resources/firewall-mdns.png" alt="mDNS 配置" style="width: 50%;">
 
    > mDNS 使用 UDP 组播进行通信，组播 IPv4 地址为 `224.0.0.251` 端口为 `5353`。
 
 5. 配置 HomeKit TCP 端口转发，一般为 `21063`，否则可能出现添加设备后无响应的问题。
    网络 -> 防火墙 -> 端口转发 -> 新增。
 
-   ![HomeKit TCP 转发](/resources/firewall-hk-tcp.png)
+   <img src="/resources/firewall-hk-tcp.png" alt="HomeKit TCP 转发" style="width: 50%;">
 
 6. 配置完端口转发应该就能连上 HomeKit 了，如果还有问题可以试着开一下 `IGMP`（ps: 我这里没验证）。
 
